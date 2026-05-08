@@ -9,14 +9,11 @@ builds:
     main: ./cmd/goplayertui
     binary: goplayertui
     env:
-      - CGO_ENABLED=0
+      - CGO_ENABLED=1
     goos:
       - linux
-      - windows
-      - darwin
     goarch:
       - amd64
-      - arm64
 
 archives:
   - format: tar.gz
