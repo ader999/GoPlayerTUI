@@ -1,0 +1,17 @@
+# Binarios y compilados
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Archivo ejecutable de este proyecto
+goplayertui
+test_player
+
+# Entornos de desarrollo
+.idea/
+.vscode/
+*.swp
