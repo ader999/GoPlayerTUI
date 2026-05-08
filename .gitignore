@@ -8,8 +8,8 @@
 *.out
 
 # Archivo ejecutable de este proyecto
-goplayertui
-test_player
+/goplayertui
+/test_player
 
 # Entornos de desarrollo
 .idea/
