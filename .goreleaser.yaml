@@ -29,7 +29,8 @@ archives:
         format: zip
     files:
       - assets/*
-
+      - LICENSE
+      - README.md
 nfpms:
   - id: goplayertui-packages
     file_name_template: '{{ .ProjectName }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
