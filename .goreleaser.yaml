@@ -40,7 +40,11 @@ nfpms:
       - deb
       - rpm
       - apk
-
+    contents:
+      - src: ./assets/goplayertui.desktop
+        dst: /usr/share/applications/goplayertui.desktop
+      - src: ./assets/goplayertui.png
+        dst: /usr/share/pixmaps/goplayertui.png
 aurs:
   - name: goplayertui-bin
     homepage: https://github.com/ader999/GoPlayerTUI
@@ -56,6 +60,12 @@ aurs:
       
       # license
       install -Dm644 "./LICENSE" "${pkgdir}/usr/share/licenses/goplayertui/LICENSE"
+
+      # desktop file
+      install -Dm644 "./assets/goplayertui.desktop" "${pkgdir}/usr/share/applications/goplayertui.desktop"
+
+      # icon
+      install -Dm644 "./assets/goplayertui.png" "${pkgdir}/usr/share/pixmaps/goplayertui.png"
     commit_author:
       name: overader
       email: goplayertui@codeader.com

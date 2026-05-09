@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=GoPlayer TUI
+Comment=Reproductor de música ultraligero
+Exec=goplayertui
+Icon=goplayertui
+Terminal=true
+Type=Application
+Categories=AudioVideo;Audio;Player;ConsoleOnly;
