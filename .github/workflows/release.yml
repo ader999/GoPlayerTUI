@@ -27,7 +27,7 @@ jobs:
 
       - name: Setup AUR SSH Key
         run: |
-          echo "${{ secrets.AUR_KEY }}" > /tmp/aur_key
+          echo "${{ secrets.AUR_KEY }}" | base64 -d > /tmp/aur_key
           chmod 600 /tmp/aur_key
 
       - name: Run GoReleaser
