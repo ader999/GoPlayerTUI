@@ -40,3 +40,23 @@ nfpms:
       - deb
       - rpm
       - apk
+
+aurs:
+  - name: goplayertui-bin
+    homepage: https://github.com/ader999/GoPlayerTUI
+    description: Reproductor de música TUI escrito en Go
+    maintainers:
+      - overader <goplayertui@codeader.com>
+    license: MIT
+    private_key: '{{ .Env.AUR_KEY }}'
+    git_url: ssh://aur@aur.archlinux.org/goplayertui-bin.git
+    package: |-
+      # bin
+      install -Dm755 "./goplayertui" "${pkgdir}/usr/bin/goplayertui"
+      
+      # license
+      install -Dm644 "./LICENSE" "${pkgdir}/usr/share/licenses/goplayertui/LICENSE"
+    commit_author:
+      name: overader
+      email: goplayertui@codeader.com
+    commit_msg_template: "AUR package update: {{ .ProjectName }} version {{ .Tag }}"
