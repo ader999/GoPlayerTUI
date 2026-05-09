@@ -25,6 +25,12 @@ jobs:
       - name: Install ALSA dependencies
         run: sudo apt-get update && sudo apt-get install -y libasound2-dev
 
+      - name: Setup AUR SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.AUR_KEY }}" > ~/.ssh/aur_key
+          chmod 600 ~/.ssh/aur_key
+
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
         with:
