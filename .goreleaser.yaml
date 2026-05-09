@@ -48,7 +48,7 @@ aurs:
     maintainers:
       - overader <goplayertui@codeader.com>
     license: MIT
-    private_key: ~/.ssh/aur_key
+    private_key: /tmp/aur_key
     git_url: ssh://aur@aur.archlinux.org/goplayertui-bin.git
     package: |-
       # bin

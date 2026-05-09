@@ -27,9 +27,8 @@ jobs:
 
       - name: Setup AUR SSH Key
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.AUR_KEY }}" > ~/.ssh/aur_key
-          chmod 600 ~/.ssh/aur_key
+          echo "${{ secrets.AUR_KEY }}" > /tmp/aur_key
+          chmod 600 /tmp/aur_key
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
